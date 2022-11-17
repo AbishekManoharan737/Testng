@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="classes" name="Failed suite [Parallel Test Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="classes" name="IE Test(failed)">
+    <parameter name="browser" value="ie"/>
+    <parameter name="version" value="11.0"/>
+    <parameter name="platform" value="WIN10"/>
+    <classes>
+      <class name="lambdatestjava.LambdaTestJava2">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="testScenario2"/>
+        </methods>
+      </class> <!-- lambdatestjava.LambdaTestJava2 -->
+      <class name="lambdatestjava.LambdaTestJava3">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="testScenario3"/>
+        </methods>
+      </class> <!-- lambdatestjava.LambdaTestJava3 -->
+    </classes>
+  </test> <!-- IE Test(failed) -->
+</suite> <!-- Failed suite [Parallel Test Suite] -->
